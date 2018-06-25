@@ -1,0 +1,49 @@
+// pane-ministers
+
+.pane-ministers {
+	padding: $small-spacing;
+	.view-content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.minister {
+		margin: $small-spacing/2;
+		flex: 0 0 100%;
+		img {
+			display: block;
+			margin: $small-spacing auto;
+			height: auto;
+			border: 1px solid $medium-gray;
+		}
+	}
+}
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	.pane-ministers {
+		.minister {
+			flex: 0 0 48%;
+			img {
+				display: block;
+				margin: $small-spacing auto;
+				height: auto;
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.pane-ministers {
+		padding: 0;
+		margin-bottom: $base-spacing;
+		.minister {
+			h2 {
+				font-size: $base-font-size * 1.4;
+			}
+			img {
+				margin: 0 $small-spacing 0 0;
+				float: left;
+			}
+		}
+	}
+}

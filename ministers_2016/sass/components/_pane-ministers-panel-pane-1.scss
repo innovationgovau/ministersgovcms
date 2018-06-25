@@ -1,0 +1,11 @@
+// pane-ministers-panel-pane-1
+
+.pane-ministers-panel-pane-1 {
+	margin-bottom: $small-spacing;
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.pane-ministers-panel-pane-1 {
+		margin-bottom: $base-spacing;
+	}
+}

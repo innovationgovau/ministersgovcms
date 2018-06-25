@@ -1,0 +1,28 @@
+// search page
+
+.search-form {
+	margin: 0 0 $base-spacing 0;
+	.container-inline {
+		display: flex;
+		align-items: flex-end;
+		.form-type-textfield {
+			margin: 0 $small-spacing 0 0;
+			width: 100%;
+			label {
+				flex-basis: 100%;
+			}
+			input {
+				
+				height: 100%;
+				border: 1px solid $medium-gray;
+				padding: 0.6em;
+				flex: 1 0 auto;
+				margin: 0 $small-spacing 0 0;
+			}
+		}
+		.form-submit {
+			flex: 0 1 auto;
+
+		}
+	}
+}

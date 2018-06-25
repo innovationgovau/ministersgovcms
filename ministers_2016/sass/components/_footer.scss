@@ -1,0 +1,80 @@
+// Footer
+
+.l-footer {
+	background-color: $dark-gray;
+	font-size: 85%;
+	color: $white;
+}
+.l-footer-menu-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	background-color: $dark-gray;
+	padding: $small-spacing;
+	color: $white;
+	a {
+		color: $white;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	> nav, > div {
+		margin-bottom: $small-spacing;
+	}
+}
+.footer-block {
+	flex: 0 0 100%;
+	padding-right: $base-spacing;
+	h2 {
+		font-size: $base-font-size * 1.2;
+	}
+	li {
+		margin-bottom: $small-spacing / 2;
+	}
+}
+.l-copyright {
+	background-color: $light-gray;
+	.block__content {
+		padding: $small-spacing;
+		text-align: center;
+	}
+	p {
+		margin: 0;
+	}
+}
+.rap p {
+	text-align: center;
+	padding: $small-spacing;
+	font-size: 90%;
+}
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	.footer-block {
+		flex: 0 0 48%;
+		h2 {
+			font-size: $base-font-size * 1.2;
+		}
+		li {
+			margin-bottom: $small-spacing / 2;
+		}
+	}
+	.l-copyright {
+		.block__content {
+			text-align: left;
+		}
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.l-footer {
+		@include bleed;
+	}
+	.l-footer-menu-wrapper {
+	}
+	.footer-block {
+		flex: 0 0 22.5%;
+	}
+	.l-copyright {
+		@include bleed;
+	}
+}

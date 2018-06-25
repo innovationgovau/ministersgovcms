@@ -1,0 +1,11 @@
+// Header
+
+.l-header {
+	margin-bottom: $small-spacing;
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.l-header {
+		margin-bottom: $base-spacing; 
+	}
+}

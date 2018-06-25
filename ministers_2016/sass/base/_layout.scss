@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Layout
+
+$susy: (
+	container: 960px,
+);
+
+$tablet: 784px;
+$desktop: 976px;
+
+$tablet-columns: 12;
+$desktop-columns: 12;
+
+.l-page {
+	@include container;
+}

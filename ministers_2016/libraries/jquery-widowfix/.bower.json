@@ -1,0 +1,15 @@
+{
+  "name": "jquery-widowfix",
+  "homepage": "https://github.com/matthewlein/jQuery-widowFix",
+  "version": "1.3.2",
+  "_release": "1.3.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.3.2",
+    "commit": "152253359d68392818f75ac0275a2bb04cf5374c"
+  },
+  "_source": "https://github.com/matthewlein/jQuery-widowFix.git",
+  "_target": "^1.3.2",
+  "_originalSource": "jquery-widowfix",
+  "_direct": true
+}

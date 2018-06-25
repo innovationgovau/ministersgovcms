@@ -1,0 +1,18 @@
+// tabs--primary
+
+.tabs--primary {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: $light-gray;
+	list-style: none !important;
+	margin: 0 !important;
+	li {
+		text-align: center;
+		margin: 0;
+		flex: 1 1 auto;
+	}
+	.active {
+		font-weight: bold;
+	}
+}

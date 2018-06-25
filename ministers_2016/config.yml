@@ -1,0 +1,29 @@
+# Your project's server will run on localhost:xxxx at this port
+PORT: 8000
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPATIBILITY:
+  - "last 2 versions"
+  - "ie >= 9"
+
+# UnCSS will use these settings
+UNCSS_OPTIONS:
+  html:
+    - "src/**/*.html"
+  ignore:
+    - !!js/regexp .foundation-mq
+    - !!js/regexp ^\.is-.*
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  sass:
+    - "sass/ministers-2016.styles.scss"
+    - "sass/ministers-2016.reset.scss"
+
+DRUSH:
+  enabled:
+    - true
+  alias: 
+    cr:
+      - "drush cc all"
+

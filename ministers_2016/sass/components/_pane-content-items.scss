@@ -1,0 +1,20 @@
+// pane-content-items
+
+.pane-content-items {
+	padding: $small-spacing;
+	.date-display-single {
+		font-style: italic;
+	}
+	.item {
+		margin-bottom: $small-spacing;
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.pane-content-items {
+		padding: 0;
+		.item {
+			margin-bottom: $base-spacing;
+		}
+	}
+}

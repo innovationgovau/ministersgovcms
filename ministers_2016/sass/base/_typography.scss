@@ -1,0 +1,96 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+}
+
+@for $i from 2 through 6 {
+  h#{$i} {
+    font-size: modular-scale((6 - $i), 1em, 1.12);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: $base-font-size * 1.3;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+    .l-content & {
+      text-decoration: underline;
+    }
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+// https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: $base-font-size*0.8;
+}
+sub { 
+  top: 0.4em; 
+}
+
+ol {
+  list-style: decimal;
+  margin-left: $base-spacing;
+  margin-bottom: $base-spacing;
+  li {
+    padding-left: $small-spacing;
+    margin-bottom: $small-spacing;
+  }
+}
+
+span.date-display-single{
+  font-style: italic;
+
+}
+
+.field--label-hidden{
+  padding-bottom: 1em;
+}

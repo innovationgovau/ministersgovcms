@@ -1,0 +1,29 @@
+// pager
+
+.pager {
+	list-style: none !important;
+	margin: 0 0 $small-spacing 0 !important;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	.pager-previous a,
+	.pager-next a {
+		@include button;
+		margin: 0 $small-spacing / 2;
+	}
+	.pager-current {
+		padding: 0.75em 1.5em;
+		line-height: 1;
+		font-weight: bold;
+		margin: 0 $small-spacing / 2;
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.pager {
+		margin-bottom: $base-spacing / 2 !important;
+		.pager-current {
+			margin: 0 $base-spacing / 2;
+		}
+	}
+}

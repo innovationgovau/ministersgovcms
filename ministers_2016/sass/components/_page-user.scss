@@ -1,0 +1,15 @@
+// page-user
+
+.page-user {
+	.l-content {
+		padding: $small-spacing;
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.page-user {
+		.l-content {
+			padding: 0;
+		}
+	}
+}

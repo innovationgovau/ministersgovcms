@@ -1,0 +1,16 @@
+// Mixins
+
+@mixin button($color: $white, $background: $blue) {
+	@extend button;
+	&:hover {
+		color: $color;
+		background-color: $background;	
+	}
+}
+
+@mixin bleed {
+	padding-left: 100%;
+	padding-right: 100%;
+	margin-left: -100%;
+	margin-right: -100%;
+}

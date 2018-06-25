@@ -1,0 +1,19 @@
+// l-header-bottom
+
+.l-header-bottom {
+	background-color: $light-gray;
+	border-top: 1px solid $medium-gray;
+	border-bottom: 1px solid $medium-gray;
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.l-header-bottom {
+		@include bleed;
+		@include clearfix;
+		padding-top: $small-spacing;
+		padding-bottom: $small-spacing;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

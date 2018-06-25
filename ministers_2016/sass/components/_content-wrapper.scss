@@ -1,0 +1,27 @@
+// content-wrapper
+
+.content-wrapper {
+	padding: $small-spacing;
+	.pane-content-items {
+		padding: 0;
+	}
+}
+
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	.content-wrapper {
+		@include clearfix;
+	}
+	.main-content {
+		@include span(first $tablet-columns / $tablet-columns * 8 of $tablet-columns);
+		&.no-sidebar {
+			@include span(full);
+		}
+	}
+	.sidebar-right {
+		@include span(last $tablet-columns / $tablet-columns * 4 of $tablet-columns);
+		padding: $small-spacing;
+	}
+}
+
+

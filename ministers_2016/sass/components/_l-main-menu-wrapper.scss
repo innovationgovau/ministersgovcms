@@ -1,0 +1,40 @@
+// l-main-menu-wrapper
+
+.l-main-menu-wrapper {
+	padding-top: $small-spacing;
+	.menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		li {
+			flex: 0 0 auto;
+			a {
+				display: block;
+				padding: $small-spacing / 2 $small-spacing;
+				margin: 1px;
+				transition: all $base-duration $base-timing;
+				border-radius: $base-border-radius;
+				&:hover {
+					color: $white;
+					background-color: $blue;
+				}
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.l-main-menu-wrapper {
+		flex: 1 0 auto;
+		padding-top: 0;
+		.menu {
+			justify-content: flex-start;
+			li {
+				a {
+					padding: $small-spacing;
+					margin: 0 $small-spacing 0 0;
+				}
+			}
+		}
+	}
+}

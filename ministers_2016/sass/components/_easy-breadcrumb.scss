@@ -1,0 +1,11 @@
+// easy-breadcrumb
+
+.easy-breadcrumb {
+	margin-bottom: $small-spacing;
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.easy-breadcrumb {
+		margin-bottom: $base-spacing;
+	}
+}

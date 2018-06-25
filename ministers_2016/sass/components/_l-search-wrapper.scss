@@ -1,0 +1,28 @@
+// l-search-wrapper
+
+.l-search-wrapper {
+	margin: $small-spacing;
+	.container-inline {
+		display: flex;
+		.form-type-textfield {
+			margin: 0 $small-spacing 0 0;
+			flex: 1 0 auto;
+			input {
+				margin: 0;
+				height: 100%;
+				border: 1px solid $medium-gray;
+				padding: 0.6em;
+			}
+		}
+		.form-actions {
+			flex: 0 0 auto;
+		}
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.l-search-wrapper {
+		flex: 0 1 auto;
+		margin: 0;
+	}
+}

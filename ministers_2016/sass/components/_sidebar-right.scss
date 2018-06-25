@@ -1,0 +1,32 @@
+// sidebar-right
+
+.sidebar-right {
+	background-color: $light-gray;
+	padding: $small-spacing;
+	border-radius: $base-border-radius;
+	h2 {
+		font-size: $base-font-size * 1.2;
+	}
+	h3 {
+		font-size: $base-font-size * 1.1;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	.sidebar-right {
+		@include span(last $tablet-columns / $tablet-columns * 4 of $tablet-columns);
+		padding: $small-spacing;
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.sidebar-right {
+		padding: $base-spacing;
+	}
+}

@@ -1,0 +1,59 @@
+// l-top-menu-wrapper
+
+.l-top-menu-wrapper {
+	background-color: $blue;
+	margin-bottom: $small-spacing;
+	.menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		li {
+			flex: 0 0 auto;
+		}
+		a {
+			@include button($blue, $white);
+			color: $white;
+			font-size: 80%;
+		}
+	}
+	.menu-wrapper {
+		padding: $small-spacing / 2;
+		&.left {
+			border-bottom: 1px solid $white;
+		}
+	}
+}
+
+@include susy-breakpoint($tablet, $tablet-columns) {
+	.l-top-menu-wrapper {
+		@include clearfix;
+		.menu-wrapper {
+			@include span($tablet-columns / 2 of $tablet-columns);
+			&.left {
+				@include first;
+				border-bottom: none;
+				.menu {
+					justify-content: flex-start;
+					li {
+						margin-right: $small-spacing;
+					}
+				}
+			}
+			&.right {
+				@include last;
+				.menu {
+					justify-content: flex-end;
+					li {
+						margin-left: $small-spacing;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($desktop, $desktop-columns) {
+	.l-top-menu-wrapper {
+		@include bleed;
+	}
+}
