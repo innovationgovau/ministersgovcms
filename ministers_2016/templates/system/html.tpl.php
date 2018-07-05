@@ -59,7 +59,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/757928/7572352/css/fonts.css" />
-  <link rel="shortcut icon" href="/sites/all/themes/ministersgovcms/ministers_2016/favicon/favicon.ico">
+  <link rel="shortcut icon" href="<?php print '/' . path_to_theme(); ?>/favicon/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" language="javascript">
 jQuery(document).ready(function($) {
