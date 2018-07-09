@@ -59,3 +59,29 @@ function ministers_2016_minister_check() {
         return FALSE;
     }
 }
+
+
+/**
+ * Implements hook_file_view_alter().
+ */
+function ministers_2016_file_view_alter($build, $type) {
+  // When viewing a file page.
+  if (arg(0) == 'file' && is_numeric(arg(1)) && !arg(2)) {
+    $file = $build['#file'];
+    // For the main file that is being loaded.
+    if ($file->fid == arg(1) && $build['#view_mode'] == 'full') {
+      // Redirect to the actual file.
+      drupal_goto(file_create_url($file->uri));
+    }
+  } 
+}
+
+
+/* filepath replacement*/
+
+drupal_static_reset('element_info');
+
+/**
+ * Include hook_preprocess_*() hooks.
+ */
+include_once './' . drupal_get_path('theme', 'ministers_2016') . '/includes/preprocess.inc';
