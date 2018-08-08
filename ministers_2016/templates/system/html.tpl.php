@@ -61,37 +61,6 @@
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/757928/7572352/css/fonts.css" />
   <link rel="shortcut icon" href="<?php print '/' . path_to_theme(); ?>/favicon/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" language="javascript">
-jQuery(document).ready(function($) {
-$('a[href^="http"]').filter(function() {
-return this.hostname && this.hostname !== location.hostname;
-})
-.addClass("external")
-
-var sitesClasses = [
-  {
-  hostname: 'business.gov.au', 
-  class: 'business', 
-  message: 'You are now leaving this website for the business.gov.au website'
-  },
-  {
-  hostname: 'industry.gov.au', 
-  class: 'industry',
-  message: 'You are now leaving this website for the industry.gov.au website'
-  },
-  ]
-
-$.each(sitesClasses, function(index) {
-$('[href*="' + sitesClasses[index]['hostname'] + '"]').removeClass('external').addClass(sitesClasses[index]['class']);
-$('a.' + sitesClasses[index]['class'] + '').attr('title', sitesClasses[index]['message']);
-});
-
-
-$("a.external").attr('title', 'This will take you to an external website.');
-
-});
-
-</script>
 
 
 
